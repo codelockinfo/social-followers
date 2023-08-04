@@ -4,30 +4,30 @@ ini_set("error_reporting", E_ALL);
  session_start();
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define("DB_SERVER", "localhost");
-    define("DB_DATABASE", "cls_rewriter");
+    define("DB_DATABASE", "cookie_bar");
     define("DB_USERNAME", "root");
     define("DB_PASSWORD", "");
     define("DB_OBJECT", "mysql"); 
     define('MODE', 'dev');
     define('ABS_PATH', dirname(dirname(__FILE__)));
-    define('MAIN_URL', 'http://localhost/cls-rewriter');
-    define('CLS_SITE_URL', 'http://localhost/cls-rewriter');
-    define('SITE_CLIENT_URL', 'http://localhost/cls-rewriter/user/');
+    define('MAIN_URL', 'http://localhost/easy-cookie-bar');
+    define('CLS_SITE_URL', 'http://localhost/easy-cookie-bar');
+    define('SITE_CLIENT_URL', 'http://localhost/easy-cookie-bar/user/');
     define('CLS_TRACK_PATH', $_SERVER['DOCUMENT_ROOT']);
-    define('SITE_ADMIN_URL', 'http://localhost/cls-rewriter/admin/');
-}elseif ($_SERVER['SERVER_NAME'] == 'codelocksolutions.in') {
+    define('SITE_ADMIN_URL', 'http://localhost/easy-cookie-bar/admin/');
+}elseif ($_SERVER['SERVER_NAME'] == 'codelocksolutions.com') {
     define("DB_SERVER", "localhost");
-    define("DB_DATABASE", "u402017191_cls_rewriter");
-    define("DB_USERNAME", "u402017191_rewriter");
+    define("DB_DATABASE", "u402017191_easycookie");
+    define("DB_USERNAME", "u402017191_cookiebar");
     define("DB_PASSWORD", "Codelock@99");
     define("DB_OBJECT", "mysql");
     define('MODE', 'live');
     define('ABS_PATH', dirname(dirname(__FILE__)));
-    define('MAIN_URL', 'https://codelocksolutions.in/cls-rewriter/');
-    define('CLS_SITE_URL', 'https://codelocksolutions.in/cls-rewriter/');
+    define('MAIN_URL', 'https://codelocksolutions.com/easy-cookie-bar/');
+    define('CLS_SITE_URL', 'https://codelocksolutions.com/easy-cookie-bar/');
      define('CLS_TRACK_PATH', $_SERVER['DOCUMENT_ROOT']);
-    define('SITE_CLIENT_URL', 'https://codelocksolutions.in/cls-rewriter/user/');
-    define('SITE_ADMIN_URL', 'https://codelocksolutions.in/cls-rewriter/admin/');
+    define('SITE_CLIENT_URL', 'https://codelocksolutions.com/easy-cookie-bar/user/');
+    define('SITE_ADMIN_URL', 'https://codelocksolutions.com/easy-cookie-bar/admin/');
 } else {
     echo 'Undefine host';
     exit;
@@ -83,7 +83,7 @@ class DB_Class {
         }
                 
 }
-define('CLS_SITE_NAME','CLS REWRITER');
+define('CLS_SITE_NAME','Easy Cookie Banner - GDPR EU');
 define('CLS_SITE_EMAIL', '#');
 define('CLS_NO_IMAGE','no-image.png');
 define('CHARGE', '0.99');
@@ -99,15 +99,9 @@ define('CLS_CLS_SVG_RESET', '<svg class="Polaris-Icon__Svg" viewBox="0 0 20 20">
 define('CLS_SVG_SEARCH', '<svg class="Polaris-Icon__Svg" viewBox="0 0 20 20"><path d="M8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm9.707 4.293l-4.82-4.82C13.585 10.493 14 9.296 14 8c0-3.313-2.687-6-6-6S2 4.687 2 8s2.687 6 6 6c1.296 0 2.492-.415 3.473-1.113l4.82 4.82c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414z" fill="#95a7b7" fill-rule="evenodd"></path></svg>');
 define('CLS_SVG_CIRCLE_PLUS', '<svg class="Polaris-Icon__Svg" viewBox="0 0 510 510" focusable="false" aria-hidden="true"><path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M382.5,280.5h-102v102h-51v-102    h-102v-51h102v-102h51v102h102V280.5z" fill-rule="evenodd" fill="#3f4eae"></path></svg>');
 define('CLS_SVG_CIRCLE_MINUS', '<svg class="Polaris-Icon__Svg" viewBox="0 0 80 80" focusable="false" aria-hidden="true"><path d="M39.769,0C17.8,0,0,17.8,0,39.768c0,21.956,17.8,39.768,39.769,39.768   c21.965,0,39.768-17.812,39.768-39.768C79.536,17.8,61.733,0,39.769,0z M13.261,45.07V34.466h53.014V45.07H13.261z" fill-rule="evenodd" fill="#DE3618"></path></svg>');
-define('TABLE_PAGE_MASTER', 'page_master');
-define('TABLE_PRODUCT_MASTER', 'product_master');
-define('TABLE_BLOGPOST_MASTER','article_master');
-define('TABLE_BLOG_MASTER','blog_master');
 define('TABLE_USER_SHOP', 'user_shops');
 define('TABLE_BACKDROPS', 'store_settings');
-define('TABLE_CUSTOMIZE', 'customize');
-define('TABLE_COLLECTION_MASTER', 'collection_master');
-define('TABLE_CUSTOMER_MASTER', 'customer_master');
+define('TABLE_COOKIEBAR_SETTINGS', 'cookiebar_settings');
 
 define("CLS_API_VERSIION",'api/2022-10');
 define('CLS_TABLE_FONT_FAMILYS', 'font_family');
@@ -197,7 +191,7 @@ function  generate_log($inventory = 'General', $log_information = 'test') {
 
   
     if (MODE == 'live') {
-       $log_filled_track = CLS_TRACK_PATH.'/cls-rewriter/logs/'. $inventory . '/'. date('Y-m-d') . ".txt";
+       $log_filled_track = CLS_TRACK_PATH.'/easy-cookie-bar/logs/'. $inventory . '/'. date('Y-m-d') . ".txt";
         $directoryname = dirname($log_filled_track);
         if (!is_dir($directoryname)) {
             mkdir($directoryname,0777, true);

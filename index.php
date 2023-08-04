@@ -18,13 +18,7 @@ require_once(ABS_PATH . '/cls_shopifyapps/cls_shopify.php');
 require_once(ABS_PATH . '/cls_shopifyapps/cls_shopify_call.php');
 
 $__webhook_arr = array(
-    'app/uninstalled',
-    'products/create',
-    'products/delete',
-    'products/update',
-    'collections/create',
-    'collections/update',
-    'collections/delete'
+    'app/uninstalled'
 );
 
 if ($_GET['shop'] != "") {
@@ -59,7 +53,7 @@ if ($_GET['shop'] != "") {
                 foreach ($__webhook_arr as $topic) {
                     $file_name = str_replace('/', '-', $topic) . '.php';
                     $params = '{"webhook": {"topic":"' . $topic . '",
-                               "address":"https://codelocksolutions.in/cls-rewriter/webhook/' . $file_name . '",
+                               "address":"https://codelocksolutions.com/easy-cookie-bar/webhook/' . $file_name . '",
                                 "format":"json"
 				}}';
                 $responce = $cls_functions->register_webhook($shopify_url, $params, $password);
@@ -68,7 +62,7 @@ if ($_GET['shop'] != "") {
             $asset = array("script_tag" =>
                 array(
                     "event" => "onload",
-                    "src" => "https://codelocksolutions.in/cls-rewriter/assets/js/shopify_front.js"
+                    "src" => "https://codelocksolutions.com/easy-cookie-bar/assets/js/shopify_front.js"
                 )
             );
             
