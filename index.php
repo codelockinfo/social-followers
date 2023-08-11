@@ -53,7 +53,7 @@ if ($_GET['shop'] != "") {
                 foreach ($__webhook_arr as $topic) {
                     $file_name = str_replace('/', '-', $topic) . '.php';
                     $params = '{"webhook": {"topic":"' . $topic . '",
-                               "address":"https://codelocksolutions.com/easy-cookie-bar/webhook/' . $file_name . '",
+                               "address":"https://codelocksolutions.com/social-followers/webhook/' . $file_name . '",
                                 "format":"json"
 				}}';
                 $responce = $cls_functions->register_webhook($shopify_url, $params, $password);
@@ -62,7 +62,7 @@ if ($_GET['shop'] != "") {
             $asset = array("script_tag" =>
                 array(
                     "event" => "onload",
-                    "src" => "https://codelocksolutions.com/easy-cookie-bar/assets/js/shopify_front.js"
+                    "src" => "https://codelocksolutions.com/social-followers/assets/js/shopify_front.js"
                 )
             );
             

@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="http://localhost/easy-cookie-bar/assets/css/polaris.css"/>
-        <link rel="stylesheet" href="http://localhost/easy-cookie-bar/assets/css/style.css"/>
+        <link rel="stylesheet" href="http://localhost/social-followers/assets/css/polaris.css"/>
+        <link rel="stylesheet" href="http://localhost/social-followers/assets/css/style.css"/>
     </head>
 <body>
     <div class="Polaris-Page pagemargin max_width_change bodycontainer">

@@ -17,12 +17,12 @@ function include(filename, onload) {
     head.appendChild(script);
 }
 
-include('https://codelocksolutions.com/easy-cookie-bar/assets/js/jquery-3.6.4.min.js', function() {
+include('https://codelocksolutions.com/social-followers/assets/js/jquery-3.6.4.min.js', function() {
     $(document).ready(function() {
         console.log("Easy Cookie Banner - GDPR EU");
         var shop = Shopify.shop;
         $.ajax({
-            url: "https://codelocksolutions.com/easy-cookie-bar/user/ajax_call.php",
+            url: "https://codelocksolutions.com/social-followers/user/ajax_call.php",
             type: "POST",
             dataType: "json",
             data: {
@@ -34,7 +34,7 @@ include('https://codelocksolutions.com/easy-cookie-bar/assets/js/jquery-3.6.4.mi
                 console.log(comeback.outcome.status +".....STATUS");
                 if ($status == 1) {
                     $.ajax({
-                        url: "https://codelocksolutions.com/easy-cookie-bar/user/ajax_call.php",
+                        url: "https://codelocksolutions.com/social-followers/user/ajax_call.php",
                         type: "POST",
                         dataType: "json",
                         data: {

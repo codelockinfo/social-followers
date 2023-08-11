@@ -10,11 +10,11 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define("DB_OBJECT", "mysql"); 
     define('MODE', 'dev');
     define('ABS_PATH', dirname(dirname(__FILE__)));
-    define('MAIN_URL', 'http://localhost/easy-cookie-bar');
-    define('CLS_SITE_URL', 'http://localhost/easy-cookie-bar');
-    define('SITE_CLIENT_URL', 'http://localhost/easy-cookie-bar/user/');
+    define('MAIN_URL', 'http://localhost/social-followers');
+    define('CLS_SITE_URL', 'http://localhost/social-followers');
+    define('SITE_CLIENT_URL', 'http://localhost/social-followers/user/');
     define('CLS_TRACK_PATH', $_SERVER['DOCUMENT_ROOT']);
-    define('SITE_ADMIN_URL', 'http://localhost/easy-cookie-bar/admin/');
+    define('SITE_ADMIN_URL', 'http://localhost/social-followers/admin/');
 }elseif ($_SERVER['SERVER_NAME'] == 'codelocksolutions.com') {
     define("DB_SERVER", "localhost");
     define("DB_DATABASE", "u402017191_easycookie");
@@ -23,11 +23,11 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define("DB_OBJECT", "mysql");
     define('MODE', 'live');
     define('ABS_PATH', dirname(dirname(__FILE__)));
-    define('MAIN_URL', 'https://codelocksolutions.com/easy-cookie-bar/');
-    define('CLS_SITE_URL', 'https://codelocksolutions.com/easy-cookie-bar/');
+    define('MAIN_URL', 'https://codelocksolutions.com/social-followers/');
+    define('CLS_SITE_URL', 'https://codelocksolutions.com/social-followers/');
      define('CLS_TRACK_PATH', $_SERVER['DOCUMENT_ROOT']);
-    define('SITE_CLIENT_URL', 'https://codelocksolutions.com/easy-cookie-bar/user/');
-    define('SITE_ADMIN_URL', 'https://codelocksolutions.com/easy-cookie-bar/admin/');
+    define('SITE_CLIENT_URL', 'https://codelocksolutions.com/social-followers/user/');
+    define('SITE_ADMIN_URL', 'https://codelocksolutions.com/social-followers/admin/');
 } else {
     echo 'Undefine host';
     exit;
@@ -191,7 +191,7 @@ function  generate_log($inventory = 'General', $log_information = 'test') {
 
   
     if (MODE == 'live') {
-       $log_filled_track = CLS_TRACK_PATH.'/easy-cookie-bar/logs/'. $inventory . '/'. date('Y-m-d') . ".txt";
+       $log_filled_track = CLS_TRACK_PATH.'/social-followers/logs/'. $inventory . '/'. date('Y-m-d') . ".txt";
         $directoryname = dirname($log_filled_track);
         if (!is_dir($directoryname)) {
             mkdir($directoryname,0777, true);
