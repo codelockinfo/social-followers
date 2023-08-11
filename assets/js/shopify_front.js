@@ -19,7 +19,7 @@ function include(filename, onload) {
 
 include('https://codelocksolutions.com/social-followers/assets/js/jquery-3.6.4.min.js', function() {
     $(document).ready(function() {
-        console.log("Easy Cookie Banner - GDPR EU");
+        console.log("Social-followers");
         var shop = Shopify.shop;
         $.ajax({
             url: "https://codelocksolutions.com/social-followers/user/ajax_call.php",

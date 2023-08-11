@@ -83,7 +83,7 @@ class DB_Class {
         }
                 
 }
-define('CLS_SITE_NAME','Easy Cookie Banner - GDPR EU');
+define('CLS_SITE_NAME','Social-followers');
 define('CLS_SITE_EMAIL', '#');
 define('CLS_NO_IMAGE','no-image.png');
 define('CHARGE', '0.99');

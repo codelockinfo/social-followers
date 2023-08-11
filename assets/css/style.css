@@ -1007,6 +1007,7 @@ body {
   height: 38px;
   line-height: 16px;
 }
+
 /* modal start */
 * {
   box-sizing: border-box;
@@ -1083,6 +1084,11 @@ p {
 .listlink{
   overflow: scroll;
 }
+}
+@media screen and (max-width: 911px) {
+  #preview-container .modal__footer .Polaris-Button {
+    width: 100%;
+  }
 }
 .QuickThemes .Polaris-FormLayout__Item{
   margin-left: 0;

@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
  
 
-        function readURL(input) {
+        function readURL1(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
@@ -32,7 +32,7 @@ $(document).ready(function(){
             }
     
             $("#file-input1").change(function() {
-            readURL(this);
+            readURL1(this);
             });
 
         $('input[name="modalTitle"]').on('keydown, keyup', function () {
